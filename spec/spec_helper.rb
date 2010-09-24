@@ -3,7 +3,6 @@ require 'active_support'
 require 'active_support/all'
 
 $LOAD_PATH.unshift "../lib"
-require "relevant/widget"
 require "relevant/twitter"
 
 RSpec.configure do |config|

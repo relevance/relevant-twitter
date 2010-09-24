@@ -1,11 +1,13 @@
+require "relevant/widget"
 require "twitter"
 
 module Relevant
   class Twitter
+    Version = "0.0.1"
     include Relevant::Widget
     
     available_options :query => :string, :limit => :string
-    refresh_every 1.minute
+    refresh_every 60
 
     template_format :haml
     template %q[
@@ -21,12 +23,14 @@ module Relevant
 ]
 
     def results
-      ::Twitter::Search.new(@options[:query]).per_page(limit)
+      ::Twitter::Search.new(options[:query]).per_page(limit)
     end
 
     def limit
-      @options[:limit].present? ? @options[:limit].to_i : 10
+      options[:limit].present? ? options[:limit].to_i : 10
     end
 
   end
 end
+
+Relevant.register Relevant::Twitter
