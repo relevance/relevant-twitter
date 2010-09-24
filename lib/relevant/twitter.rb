@@ -1,5 +1,5 @@
-require "relevant/widget"
 require "twitter"
+require "relevant/widget"
 
 module Relevant
   class Twitter
@@ -7,7 +7,7 @@ module Relevant
     include Relevant::Widget
     
     available_options :query => :string, :limit => :string
-    refresh_every 60
+    refresh_every 1.minute
 
     template_format :haml
     template %q[

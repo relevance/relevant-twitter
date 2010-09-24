@@ -1,6 +1,4 @@
 require 'rspec'
-require 'active_support'
-require 'active_support/core_ext'
 
 $LOAD_PATH.unshift "../lib"
 require "relevant/twitter"
