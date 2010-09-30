@@ -3,7 +3,7 @@ require "relevant/widget"
 
 module Relevant
   class Twitter
-    Version = "0.0.4"
+    Version = "0.0.5"
     include Relevant::Widget
     
     available_options :query => :string, :limit => :string
