@@ -15,7 +15,7 @@ begin
     gemspec.authors = ["Jared Pace", "Rob Sanheim"]
     gemspec.add_dependency "relevant-widget", "~> 0.0.7"
     gemspec.add_dependency "twitter", "~> 0.9.10"
-    gemspec.add_development_dependency "rspec", "~> 2.0.0.beta.22"
+    gemspec.add_development_dependency "rspec", "~> 2.0.0.rc"
   end
   Jeweler::GemcutterTasks.new
   
